@@ -4,6 +4,7 @@ gem "devise"
 bundle install
 rails generate devise:install
 
+-------------
 
 Some setup you must do manually if you haven't yet:
 
@@ -30,3 +31,16 @@ Some setup you must do manually if you haven't yet:
 - Configure the e-mail address which will be shown in Devise::Mailer,
 - Note that it will be overwritten if you use your own mailer class with default "from" parameter.
     config.mailer_sender = 'please-change-me-at-config-initializers-devise@example.com'
+
+
+------------------
+
+create user model:
+
+rails generate devise User
+rails db:migrate
+
+generate views:
+
+rails generate devise:views
+
